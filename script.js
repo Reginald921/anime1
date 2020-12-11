@@ -8,6 +8,7 @@ searchBar.addEventListener('keyup', (e) =>{
   const filteredCharacters = hpCharacters.top.filter((character) => {
     return (
     character.title.toLowerCase().includes(searchString) ||
+  
     character.type.toLowerCase().includes(searchString) 
     );
   });
@@ -33,7 +34,7 @@ const displayCharacters = (characters) => {
     return `
     <li class="character">
       <div>
-        <h5>${character.title}</h5>
+        <h6>${character.title}</h6>
         <a  href="${character.url}"><img src="${character.image_url}"></a><br>
         <h6>${character.start_date}</h6>
       </div>
